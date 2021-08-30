@@ -1648,7 +1648,6 @@ dependencies = [
  "clap",
  "ethers",
  "hex-literal",
- "k256",
  "secrecy",
  "tokio",
 ]

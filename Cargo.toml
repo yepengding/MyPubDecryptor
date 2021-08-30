@@ -9,7 +9,6 @@ readme = "README.md"
 
 [dependencies]
 tokio = { version = "1.10.1", features = ["full"] }
-k256 = { version = "0.9.6", features = ["ecdsa-core"] }
 hex-literal = "0.3.3"
 age = "0.6.0"
 secrecy = "0.7"
