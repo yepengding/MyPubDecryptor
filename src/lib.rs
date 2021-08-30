@@ -2,6 +2,7 @@ use clap::{App, Arg};
 
 mod config;
 pub mod cipher;
+mod verifier;
 
 /// Config struct that holds decryption information
 #[derive(Debug)]

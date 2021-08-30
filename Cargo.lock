@@ -1647,7 +1647,9 @@ dependencies = [
  "age",
  "clap",
  "ethers",
+ "hex",
  "hex-literal",
+ "k256",
  "secrecy",
  "tokio",
 ]
