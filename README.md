@@ -6,7 +6,7 @@ Decryptor of MyPub Cipher Suite.
 
 ```
 USAGE:
-    mypub-decryptor [OPTIONS] --key <PRIVATE KEY> <FILE>
+    mypub-decryptor.exe [OPTIONS] --id <CID> --key <PRIVATE KEY> <FILE>
 
 ARGS:
     <FILE>    Sets an input file path
@@ -16,6 +16,7 @@ FLAGS:
     -V, --version    Print version information
 
 OPTIONS:
+    -i, --id <CID>               Sets the publication cid
     -k, --key <PRIVATE KEY>      Sets your private key
     -o, --output <OUTPUT DIR>    Sets your output directory
 ```
@@ -30,10 +31,16 @@ OPTIONS:
 
 ## Development
 
-### Build
+### Build Debug
 
 ```shell
 cargo build
+```
+
+### Build Release
+
+```shell
+cargo build --release
 ```
 
 ## Reference

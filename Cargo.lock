@@ -1650,7 +1650,10 @@ dependencies = [
  "hex",
  "hex-literal",
  "k256",
+ "reqwest",
  "secrecy",
+ "serde",
+ "serde_json",
  "tokio",
 ]
 
