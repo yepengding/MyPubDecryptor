@@ -1,11 +1,10 @@
-use crate::Config;
 use std::error::Error;
-
-use std::fs::{File};
+use std::fs::File;
 use std::io::{Read, Write};
 
 use secrecy::Secret;
 
+use crate::Config;
 use crate::config::GLOBAL_CONFIG;
 
 /// Decrypt the input file and output to disk
@@ -39,4 +38,24 @@ pub async fn decrypt(config: &Config) -> Result<(), Box<dyn Error>> {
     decrypted_file.flush()?;
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Config;
+    use crate::cipher::decrypt;
+
+    #[tokio::test]
+    async fn decryption() {
+        let config = Config {
+            file_path: "./encrypted".to_string(),
+            cid: "".to_string(),
+            private_key: "a private key".to_string(),
+            output_dir: "./".to_string(),
+        };
+
+        let _ = decrypt(&config).await;
+
+    }
+
 }

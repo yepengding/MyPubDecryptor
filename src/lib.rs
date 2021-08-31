@@ -56,7 +56,7 @@ pub fn init_cli() -> Config {
         config.file_path = String::from(file_path);
     }
 
-    if let Some(cid) = matches.value_of("CID") {
+    if let Some(cid) = matches.value_of("cid") {
         config.cid = String::from(cid);
     }
 
