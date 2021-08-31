@@ -22,7 +22,9 @@ abigen!(
     event_derives(serde::Deserialize, serde::Serialize)
 );
 
+
 /// Verify whether current account has paid
+/// TODO Ethereum certificate verification
 /// # Arguments
 /// * `private_key` - Private key of the current account
 /// * `cid` - Publication CID
@@ -71,6 +73,16 @@ pub async fn verify_paid(private_key: &str, cid: &str) -> Result<bool, Box<dyn E
     }
 
     Ok(r)
+}
+
+/// Verify whether file has been tampered
+/// Check Filecoin network
+/// TODO Filecoin certificate verification
+/// # Arguments
+/// * `cid` - Publication CID
+pub async fn verify_integrity(cid: &str) -> Result<bool, Box<dyn Error>> {
+    let _ = cid;
+    Ok(true)
 }
 
 ///
