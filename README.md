@@ -25,9 +25,10 @@ OPTIONS:
 
 1. Parse CLI argument to `Config` struct;
 2. Read input file;
-3. Check paid events on chain;
-4. Decrypt file with hard-coded key;
-5. Output `decrypted file`.
+3. Verify file integrity on Filecoin Chain;
+4. Verify payment on Ethereum chain;
+5. Decrypt file with hard-coded key;
+6. Output `decrypted file`.
 
 ## Development
 
