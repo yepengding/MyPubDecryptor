@@ -32,6 +32,21 @@ OPTIONS:
 
 ## Development
 
+### Configuration
+
+> config.rs
+
+- `network` Ethereum network
+- `contract_address` Deployed publication contract address
+- `secret` Hardcoded secret key
+- `decrypted_name` Decrypted name
+
+### Run tests
+
+```shell
+cargo test
+```
+
 ### Build Debug
 
 ```shell
@@ -43,6 +58,10 @@ cargo build
 ```shell
 cargo build --release
 ```
+
+## UI
+
+![UI](./doc/ui.png)
 
 ## MyPub Components
 
